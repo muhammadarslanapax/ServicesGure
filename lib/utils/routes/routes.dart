@@ -5,7 +5,7 @@ import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled12/utils/routes/routes_names.dart';
-import 'package:untitled12/views/home/HomePage.dart';
+import 'package:untitled12/views/home/HomeScreen.dart';
 
 
 class Routes {
@@ -13,8 +13,8 @@ class Routes {
   static Route<dynamic>  generateRoute(RouteSettings settings){
 
     switch(settings.name){
-       case RoutesName.home:
-         return MaterialPageRoute(builder: (BuildContext context) => const HomePage());
+       case RoutesName.homeScreen:
+         return MaterialPageRoute(builder: (BuildContext context) => const HomeScreen());
 
       // case RoutesName.home:
       //   return MaterialPageRoute(builder: (BuildContext context) => const HomeScreen());

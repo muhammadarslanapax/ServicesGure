@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:untitled12/res/constants/app_colors.dart';
 import 'package:untitled12/utils/routes/routes.dart';
 import 'package:untitled12/utils/routes/routes_names.dart';
 
@@ -21,12 +21,17 @@ class MyApp extends StatelessWidget {
       child:*/
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        initialRoute: RoutesName.home,
-        onGenerateRoute: Routes.generateRoute,
-      );
+      title: 'Flutter Demo',
+      theme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: AppColor().appPrimarySwatch,
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+            selectedItemColor: AppColor.primaryColor,
+          ),
+      ),
+
+      initialRoute: RoutesName.homeScreen,
+      onGenerateRoute: Routes.generateRoute,
+    );
   }
 }
