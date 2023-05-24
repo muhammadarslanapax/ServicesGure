@@ -12,19 +12,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
+    return
+/*      MultiProvider(
       providers: [
         // ChangeNotifierProvider(create: (_) => AuthViewModel()),
         // ChangeNotifierProvider(create: (_) => UserViewModel())
       ],
-      child: MaterialApp(
+      child:*/
+      MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        initialRoute: RoutesName.splash,
+        initialRoute: RoutesName.home,
         onGenerateRoute: Routes.generateRoute,
-      ),
-    );
+      );
   }
 }
